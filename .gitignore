@@ -1,0 +1,11 @@
+.idea
+.gradle
+*.iml
+*idea
+*iml
+build
+target
+.DS_Store
+*.swp
+.config
+.elasticbeanstalk
