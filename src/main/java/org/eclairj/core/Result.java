@@ -1,8 +1,9 @@
 package org.eclairj.core;
 
-class Result  <R> {
+class Result <R> {
     private R result;
     private String id;
+    private Error error;
 
     public Result() {}
     public Result(String id, R result) {
@@ -28,9 +29,10 @@ class Result  <R> {
 
     @Override
     public String toString() {
-        return "NodeInfo{" +
-                "\n\tresult=" + result +
-                "\n\tid='" + id + '\'' +
+        return "Result{" +
+                "result=" + result +
+                ", id='" + id + '\'' +
+                ", error=" + error +
                 '}';
     }
 }
