@@ -1,6 +1,8 @@
 package org.eclairj.core;
 
-import feign.*;
+import feign.Feign;
+import feign.Headers;
+import feign.RequestLine;
 import feign.auth.BasicAuthRequestInterceptor;
 import feign.jackson.JacksonDecoder;
 import feign.jackson.JacksonEncoder;
@@ -14,5 +16,5 @@ public interface Eclair {
 
     @RequestLine("POST /")
     @Headers("Content-Type: application/json")
-    NodeInfo getInfo(RequestBody requestBody);
+    Result<NodeInfo> getInfo(RequestBody requestBody);
 }
