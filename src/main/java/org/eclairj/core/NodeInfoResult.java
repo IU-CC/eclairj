@@ -1,6 +1,6 @@
 package org.eclairj.core;
 
-class NodeInfoResult {
+class NodeInfoResult extends Result <NodeInfoResult>{
     public NodeInfoResult() {
     }
 
