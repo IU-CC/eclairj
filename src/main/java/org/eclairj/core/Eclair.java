@@ -14,6 +14,5 @@ public interface Eclair {
 
     @RequestLine("POST /")
     @Headers("Content-Type: application/json")
-    @Body("{\"jsonrpc\": \"2.0\", \"method\": \"getinfo\"}")
-    NodeInfo getInfo();
+    NodeInfo getInfo(RequestBody requestBody);
 }

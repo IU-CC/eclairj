@@ -2,11 +2,8 @@ package org.eclairj.core;
 
 public class Main {
     public static void main(String[] args) {
-        NodeInfo nodeInfoResult = Eclair.api.getInfo();
+        RequestBody body = new RequestBody("getinfo");
+        NodeInfo nodeInfoResult = Eclair.api.getInfo(body);
         System.out.println(nodeInfoResult);
-
-        NodeInfoResult info = nodeInfoResult.getResult();
-
-        System.out.println(info.getAlias());
     }
 }
