@@ -1,5 +1,9 @@
 package org.eclairj.core;
 
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+
+import static org.apache.commons.lang3.builder.ToStringStyle.SHORT_PREFIX_STYLE;
+
 public class NodeInfo {
     private String nodeId;
     private String alias;
@@ -48,5 +52,10 @@ public class NodeInfo {
 
     public void setBlockHeight(Integer blockHeight) {
         this.blockHeight = blockHeight;
+    }
+
+    @Override
+    public String toString() {
+        return ReflectionToStringBuilder.toString(this, SHORT_PREFIX_STYLE);
     }
 }
