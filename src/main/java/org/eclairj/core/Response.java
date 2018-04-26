@@ -4,12 +4,12 @@ import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 
 import static org.apache.commons.lang3.builder.ToStringStyle.SHORT_PREFIX_STYLE;
 
-public class Result<T> {
+public class Response<T> {
     private T result;
     private Error error;
     private String id;
 
-    public Result() {
+    public Response() {
 
     }
 
