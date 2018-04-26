@@ -59,6 +59,17 @@ public interface Eclair {
     Result<List<?>> peers(RequestBody requestBody);
 
     /**
+     * Lists existing local channels.
+     * params: none
+     *
+     * @param requestBody
+     * @return
+     */
+    @RequestLine("POST /")
+    @Headers("Content-Type: application/json")
+    Result<List<?>> channels(RequestBody requestBody);
+
+    /**
      * generate a payment request with or without a required amount. Requests without an amount
      * can be useful for donations.
      * params: [description] or [amountMsat, description]
