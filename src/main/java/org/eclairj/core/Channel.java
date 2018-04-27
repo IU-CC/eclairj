@@ -8,9 +8,18 @@ public class Channel {
     private String nodeId;
     private String channelId;
     private String state;
+    private ChannelData data;
 
     public Channel() {
 
+    }
+
+    public ChannelData getData() {
+        return data;
+    }
+
+    public void setData(ChannelData data) {
+        this.data = data;
     }
 
     public String getNodeId() {
