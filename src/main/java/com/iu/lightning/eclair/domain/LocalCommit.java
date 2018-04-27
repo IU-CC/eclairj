@@ -1,16 +1,15 @@
-package org.eclairj.core;
+package com.iu.lightning.eclair.domain;
 
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 
 import static org.apache.commons.lang3.builder.ToStringStyle.SHORT_PREFIX_STYLE;
 
-public class RemoteCommit {
+public class LocalCommit {
     private Integer index;
     private Spec spec;
-    private String txid;
-    private String remotePerCommitmentPoint;
+    private PublishableTxs publishableTxs;
 
-    public RemoteCommit() {
+    public LocalCommit() {
     }
 
     public Integer getIndex() {
@@ -29,20 +28,12 @@ public class RemoteCommit {
         this.spec = spec;
     }
 
-    public String getTxid() {
-        return txid;
+    public PublishableTxs getPublishableTxs() {
+        return publishableTxs;
     }
 
-    public void setTxid(String txid) {
-        this.txid = txid;
-    }
-
-    public String getRemotePerCommitmentPoint() {
-        return remotePerCommitmentPoint;
-    }
-
-    public void setRemotePerCommitmentPoint(String remotePerCommitmentPoint) {
-        this.remotePerCommitmentPoint = remotePerCommitmentPoint;
+    public void setPublishableTxs(PublishableTxs publishableTxs) {
+        this.publishableTxs = publishableTxs;
     }
 
     @Override

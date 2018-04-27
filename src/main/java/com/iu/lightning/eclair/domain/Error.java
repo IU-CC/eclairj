@@ -1,4 +1,4 @@
-package org.eclairj.core;
+package com.iu.lightning.eclair.domain;
 
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;

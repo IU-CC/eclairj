@@ -1,5 +1,7 @@
-package org.eclairj.core;
+package com.iu.lightning.eclair;
 
+import com.iu.lightning.eclair.domain.*;
+import com.iu.lightning.eclair.domain.Response;
 import feign.*;
 import feign.auth.BasicAuthRequestInterceptor;
 import feign.jackson.JacksonDecoder;
@@ -149,7 +151,7 @@ public interface Eclair {
     @RequestLine("POST /")
     @Headers("Content-Type: application/json")
     @Body(PARAM_BODY_PREFIX + "checkinvoice" + ARGS_PREFIX + "\"{paymentRequest}\"" + PARAM_ARGS_SUFFIX)
-    Response<?> checkinvoice(@Param("paymentRequest") String paymentRequest);
+    Response<InvoiceDetails> checkinvoice(@Param("paymentRequest") String paymentRequest);
 
     /**
      * Generates a payment request without a required amount (can be useful for donations).
@@ -169,8 +171,8 @@ public interface Eclair {
      */
     @RequestLine("POST /")
     @Headers("Content-Type: application/json")
-    @Body(PARAM_BODY_PREFIX + "receive" + ARGS_PREFIX + "\"{amountMsat}\", \"{description}\"" + PARAM_ARGS_SUFFIX)
-    void receive(@Param("amountMsat") long amountMsat, @Param("description") String description);
+    @Body(PARAM_BODY_PREFIX + "receive" + ARGS_PREFIX + "{amountMsat}, \"{description}\"" + PARAM_ARGS_SUFFIX)
+    Response<String> receive(@Param("amountMsat") long amountMsat, @Param("description") String description);
 
     /**
      * Send a payment to a lightning node.
@@ -181,7 +183,7 @@ public interface Eclair {
      */
     @RequestLine("POST /")
     @Headers("Content-Type: application/json")
-    @Body(PARAM_BODY_PREFIX + "send" + ARGS_PREFIX + "\"{amountMsat}\", \"{paymentHash}\", \"{nodeId}\"" + PARAM_ARGS_SUFFIX)
+    @Body(PARAM_BODY_PREFIX + "send" + ARGS_PREFIX + "{amountMsat}, \"{paymentHash}\", \"{nodeId}\"" + PARAM_ARGS_SUFFIX)
     void send(@Param("amountMsat") long amountMsat, @Param("paymentHash") String paymentHash, @Param("nodeId") String nodeId);
 
     /**
@@ -202,7 +204,7 @@ public interface Eclair {
      */
     @RequestLine("POST /")
     @Headers("Content-Type: application/json")
-    @Body(PARAM_BODY_PREFIX + "send" + ARGS_PREFIX + "\"{paymentRequest}\", \"{amountMsat}\"" + PARAM_ARGS_SUFFIX)
+    @Body(PARAM_BODY_PREFIX + "send" + ARGS_PREFIX + "\"{paymentRequest}\", {amountMsat}" + PARAM_ARGS_SUFFIX)
     void send(@Param("paymentRequest") String paymentRequest, @Param("amountMsat") long amountMsat);
 
     /**
