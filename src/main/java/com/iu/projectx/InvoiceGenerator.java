@@ -2,9 +2,10 @@ package com.iu.projectx;
 
 import com.iu.lightning.eclair.domain.Response;
 
-import static com.iu.Config.*;
+import static com.iu.Config.LN_NODE_1;
 
-public class InvoiceGenerator {
+public class InvoiceGenerator
+{
 
     public static String getInvoice(long amount, String btcWallet)
     {
@@ -16,11 +17,12 @@ public class InvoiceGenerator {
 
         System.out.println("The response from getInvoice: " + response.getResult());
 
-        try {
+        try
+        {
             Thread.sleep(2000);
+        } catch (Exception e)
+        {
         }
-        catch (Exception e)
-        { }
 
         return response.getResult();
     }

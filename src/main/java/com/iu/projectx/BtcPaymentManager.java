@@ -2,7 +2,7 @@ package com.iu.projectx;
 
 import com.iu.lightning.eclair.domain.InvoiceDetails;
 
-import static com.iu.Config.*;
+import static com.iu.Config.LN_NODE_1;
 
 public class BtcPaymentManager
 {

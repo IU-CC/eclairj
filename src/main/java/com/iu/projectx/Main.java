@@ -1,9 +1,12 @@
 package com.iu.projectx;
-import static com.iu.Config.*;
 
-public class Main {
+import static com.iu.Config.LN_NODE_1;
 
-    public static void main(String... args) {
+public class Main
+{
+
+    public static void main(String... args)
+    {
 
         long requestAmount = 1234;
         String btc_destination = "BTCAW87FDT8SDTF8GWQGS78GS87DTG08JKDHFSJ";

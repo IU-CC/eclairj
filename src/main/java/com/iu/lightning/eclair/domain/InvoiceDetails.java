@@ -2,7 +2,8 @@ package com.iu.lightning.eclair.domain;
 
 import java.util.Arrays;
 
-public class InvoiceDetails {
+public class InvoiceDetails
+{
     private Tag[] tags;
 
     private String timestamp;
@@ -15,56 +16,69 @@ public class InvoiceDetails {
 
     private String signature;
 
-    public Tag[] getTags() {
+    public Tag[] getTags()
+    {
         return tags;
     }
 
-    public void setTags(Tag[] tags) {
+    public void setTags(Tag[] tags)
+    {
         this.tags = tags;
     }
 
-    public String getTimestamp() {
+    public String getTimestamp()
+    {
         return timestamp;
     }
 
-    public void setTimestamp(String timestamp) {
+    public void setTimestamp(String timestamp)
+    {
         this.timestamp = timestamp;
     }
 
-    public Amount getAmount() {
+    public Amount getAmount()
+    {
         return amount;
     }
 
-    public void setAmount(Amount amount) {
+    public void setAmount(Amount amount)
+    {
         this.amount = amount;
     }
 
-    public String getNodeId() {
+    public String getNodeId()
+    {
         return nodeId;
     }
 
-    public void setNodeId(String nodeId) {
+    public void setNodeId(String nodeId)
+    {
         this.nodeId = nodeId;
     }
 
-    public String getPrefix() {
+    public String getPrefix()
+    {
         return prefix;
     }
 
-    public void setPrefix(String prefix) {
+    public void setPrefix(String prefix)
+    {
         this.prefix = prefix;
     }
 
-    public String getSignature() {
+    public String getSignature()
+    {
         return signature;
     }
 
-    public void setSignature(String signature) {
+    public void setSignature(String signature)
+    {
         this.signature = signature;
     }
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         return "InvoiceDetails{" +
                 "tags=" + Arrays.toString(tags) +
                 ", timestamp='" + timestamp + '\'' +
@@ -76,19 +90,23 @@ public class InvoiceDetails {
     }
 }
 
-class Amount {
+class Amount
+{
     private String amount;
 
-    public String getAmount() {
+    public String getAmount()
+    {
         return amount;
     }
 
-    public void setAmount(String amount) {
+    public void setAmount(String amount)
+    {
         this.amount = amount;
     }
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         return "Amount{" +
                 "amount='" + amount + '\'' +
                 '}';

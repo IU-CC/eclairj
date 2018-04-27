@@ -1,45 +1,53 @@
 package com.iu.lightning.eclair.domain;
 
-import com.iu.lightning.eclair.domain.Error;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 
 import static org.apache.commons.lang3.builder.ToStringStyle.SHORT_PREFIX_STYLE;
 
-public class Response<T> {
+public class Response<T>
+{
     private T result;
     private Error error;
     private String id;
 
-    public Response() {
+    public Response()
+    {
 
     }
 
-    public Error getError() {
+    public Error getError()
+    {
         return error;
     }
 
-    public void setError(Error error) {
+    public void setError(Error error)
+    {
         this.error = error;
     }
 
-    public T getResult() {
+    public T getResult()
+    {
         return result;
     }
 
-    public void setResult(T result) {
+    public void setResult(T result)
+    {
         this.result = result;
     }
 
-    public String getId() {
+    public String getId()
+    {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(String id)
+    {
         this.id = id;
     }
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         return ReflectionToStringBuilder.toString(this, SHORT_PREFIX_STYLE);
     }
 }

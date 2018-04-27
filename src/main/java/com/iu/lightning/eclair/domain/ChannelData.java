@@ -4,58 +4,71 @@ import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 
 import static org.apache.commons.lang3.builder.ToStringStyle.SHORT_PREFIX_STYLE;
 
-public class ChannelData {
+public class ChannelData
+{
     private ChannelCommitments commitments;
     private String shortChannelId;
     private Boolean buried;
     private ChannelAnnouncement channelAnnouncement;
     private ChannelUpdate channelUpdate;
 
-    public ChannelData() {
+    public ChannelData()
+    {
     }
 
-    public ChannelCommitments getCommitments() {
+    public ChannelCommitments getCommitments()
+    {
         return commitments;
     }
 
-    public void setCommitments(ChannelCommitments commitments) {
+    public void setCommitments(ChannelCommitments commitments)
+    {
         this.commitments = commitments;
     }
 
-    public String getShortChannelId() {
+    public String getShortChannelId()
+    {
         return shortChannelId;
     }
 
-    public void setShortChannelId(String shortChannelId) {
+    public void setShortChannelId(String shortChannelId)
+    {
         this.shortChannelId = shortChannelId;
     }
 
-    public Boolean getBuried() {
+    public Boolean getBuried()
+    {
         return buried;
     }
 
-    public void setBuried(Boolean buried) {
+    public void setBuried(Boolean buried)
+    {
         this.buried = buried;
     }
 
-    public ChannelAnnouncement getChannelAnnouncement() {
+    public ChannelAnnouncement getChannelAnnouncement()
+    {
         return channelAnnouncement;
     }
 
-    public void setChannelAnnouncement(ChannelAnnouncement channelAnnouncement) {
+    public void setChannelAnnouncement(ChannelAnnouncement channelAnnouncement)
+    {
         this.channelAnnouncement = channelAnnouncement;
     }
 
-    public ChannelUpdate getChannelUpdate() {
+    public ChannelUpdate getChannelUpdate()
+    {
         return channelUpdate;
     }
 
-    public void setChannelUpdate(ChannelUpdate channelUpdate) {
+    public void setChannelUpdate(ChannelUpdate channelUpdate)
+    {
         this.channelUpdate = channelUpdate;
     }
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         return ReflectionToStringBuilder.toString(this, SHORT_PREFIX_STYLE);
     }
 
