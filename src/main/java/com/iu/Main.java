@@ -5,9 +5,9 @@ import com.iu.lightning.eclair.domain.NodeInfo;
 import com.iu.lightning.eclair.domain.Peer;
 import com.iu.lightning.eclair.domain.Response;
 
-import static com.iu.Config.*;
-
 import java.util.List;
+
+import static com.iu.Config.*;
 
 public class Main
 {

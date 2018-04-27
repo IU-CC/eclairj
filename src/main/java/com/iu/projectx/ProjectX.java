@@ -2,10 +2,8 @@ package com.iu.projectx;
 
 public class ProjectX
 {
-
     public static void main(String... args)
     {
-
         long requestAmount = 1234;
         String btc_destination = "BTCAW87FDT8SDTF8GWQGS78GS87DTG08JKDHFSJ";
 
