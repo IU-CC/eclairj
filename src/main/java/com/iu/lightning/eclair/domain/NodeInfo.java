@@ -4,58 +4,71 @@ import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 
 import static org.apache.commons.lang3.builder.ToStringStyle.SHORT_PREFIX_STYLE;
 
-public class NodeInfo {
+public class NodeInfo
+{
     private String nodeId;
     private String alias;
     private Integer port;
     private String chainHash;
     private Integer blockHeight;
 
-    public NodeInfo() {
+    public NodeInfo()
+    {
     }
 
-    public String getNodeId() {
+    public String getNodeId()
+    {
         return nodeId;
     }
 
-    public void setNodeId(String nodeId) {
+    public void setNodeId(String nodeId)
+    {
         this.nodeId = nodeId;
     }
 
-    public String getAlias() {
+    public String getAlias()
+    {
         return alias;
     }
 
-    public void setAlias(String alias) {
+    public void setAlias(String alias)
+    {
         this.alias = alias;
     }
 
-    public Integer getPort() {
+    public Integer getPort()
+    {
         return port;
     }
 
-    public void setPort(Integer port) {
+    public void setPort(Integer port)
+    {
         this.port = port;
     }
 
-    public String getChainHash() {
+    public String getChainHash()
+    {
         return chainHash;
     }
 
-    public void setChainHash(String chainHash) {
+    public void setChainHash(String chainHash)
+    {
         this.chainHash = chainHash;
     }
 
-    public Integer getBlockHeight() {
+    public Integer getBlockHeight()
+    {
         return blockHeight;
     }
 
-    public void setBlockHeight(Integer blockHeight) {
+    public void setBlockHeight(Integer blockHeight)
+    {
         this.blockHeight = blockHeight;
     }
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         return ReflectionToStringBuilder.toString(this, SHORT_PREFIX_STYLE);
     }
 }

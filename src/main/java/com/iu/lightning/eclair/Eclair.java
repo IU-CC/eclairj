@@ -9,7 +9,8 @@ import feign.jackson.JacksonEncoder;
 
 import java.util.List;
 
-public interface Eclair {
+public interface Eclair
+{
     String BODY_PREFIX = "{\"jsonrpc\": \"2.0\", \"method\": \"";
     String PARAM_BODY_PREFIX = "%7B\"jsonrpc\": \"2.0\", \"method\": \"";
     String ARGS_PREFIX = "\", \"params\": [";

@@ -10,11 +10,11 @@ public class PaymentListener
         {
             try
             {
-                System.out.println("Not paid.  Tell the deadbeat to hurry up!");
+                System.out.println("Invoice not paid.  Tell the deadbeat to hurry up!");
                 Thread.sleep(10000);
+            } catch (Exception e)
+            {
             }
-            catch (Exception e)
-            { }
         }
 
         return invoice;

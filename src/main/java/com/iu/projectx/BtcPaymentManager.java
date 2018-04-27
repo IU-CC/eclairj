@@ -9,15 +9,12 @@ public class BtcPaymentManager
     public static void prepareAndSendBTCPaymentFor(String invoice)
     {
         InvoiceDetails invoiceDetails = LN_NODE_1.checkinvoice(invoice).getResult();
-        System.out.println("Invoice Details: " + invoiceDetails);
-
-        String description = invoiceDetails.getTags()[1].getValue();
-        System.out.println("Description: " + description);
-
+        String description = invoiceDetails.getTags()[1].getValue().toString();
         String[] values = description.split("]");
 
-        String btcAddress = description.substring(values[0].indexOf("["));
-        String btcAmount = description.substring(values[1].indexOf("["));
+
+        String btcAddress = values[0].substring(values[0].indexOf("[") + 1, values[0].length());
+        String btcAmount = values[1].substring(values[1].indexOf("[") + 1, values[1].length());
 
         System.out.println("Sending BTC Payment of: " + btcAmount + " to " + btcAddress);
     }

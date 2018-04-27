@@ -4,50 +4,61 @@ import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 
 import static org.apache.commons.lang3.builder.ToStringStyle.SHORT_PREFIX_STYLE;
 
-public class Channel {
+public class Channel
+{
     private String nodeId;
     private String channelId;
     private String state;
     private ChannelData data;
 
-    public Channel() {
+    public Channel()
+    {
 
     }
 
-    public ChannelData getData() {
+    public ChannelData getData()
+    {
         return data;
     }
 
-    public void setData(ChannelData data) {
+    public void setData(ChannelData data)
+    {
         this.data = data;
     }
 
-    public String getNodeId() {
+    public String getNodeId()
+    {
         return nodeId;
     }
 
-    public void setNodeId(String nodeId) {
+    public void setNodeId(String nodeId)
+    {
         this.nodeId = nodeId;
     }
 
-    public String getChannelId() {
+    public String getChannelId()
+    {
         return channelId;
     }
 
-    public void setChannelId(String channelId) {
+    public void setChannelId(String channelId)
+    {
         this.channelId = channelId;
     }
 
-    public String getState() {
+    public String getState()
+    {
         return state;
     }
 
-    public void setState(String state) {
+    public void setState(String state)
+    {
         this.state = state;
     }
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         return ReflectionToStringBuilder.toString(this, SHORT_PREFIX_STYLE);
     }
 

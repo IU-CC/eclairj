@@ -5,7 +5,8 @@ import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 
 import static org.apache.commons.lang3.builder.ToStringStyle.SHORT_PREFIX_STYLE;
 
-public class LocalParams {
+public class LocalParams
+{
     private String nodeId;
     private ChannelKeyPath channelKeyPath;
     private Long dustLimitSatoshis;
@@ -19,107 +20,133 @@ public class LocalParams {
     private String globalFeatures;
     private String localFeatures;
 
-    public LocalParams() {
+    public LocalParams()
+    {
     }
 
-    public String getNodeId() {
+    public String getNodeId()
+    {
         return nodeId;
     }
 
-    public void setNodeId(String nodeId) {
+    public void setNodeId(String nodeId)
+    {
         this.nodeId = nodeId;
     }
 
-    public ChannelKeyPath getChannelKeyPath() {
+    public ChannelKeyPath getChannelKeyPath()
+    {
         return channelKeyPath;
     }
 
-    public void setChannelKeyPath(ChannelKeyPath channelKeyPath) {
+    public void setChannelKeyPath(ChannelKeyPath channelKeyPath)
+    {
         this.channelKeyPath = channelKeyPath;
     }
 
-    public Long getDustLimitSatoshis() {
+    public Long getDustLimitSatoshis()
+    {
         return dustLimitSatoshis;
     }
 
-    public void setDustLimitSatoshis(Long dustLimitSatoshis) {
+    public void setDustLimitSatoshis(Long dustLimitSatoshis)
+    {
         this.dustLimitSatoshis = dustLimitSatoshis;
     }
 
-    public Long getMaxHtlcValueInFlightMsat() {
+    public Long getMaxHtlcValueInFlightMsat()
+    {
         return maxHtlcValueInFlightMsat;
     }
 
-    public void setMaxHtlcValueInFlightMsat(Long maxHtlcValueInFlightMsat) {
+    public void setMaxHtlcValueInFlightMsat(Long maxHtlcValueInFlightMsat)
+    {
         this.maxHtlcValueInFlightMsat = maxHtlcValueInFlightMsat;
     }
 
-    public Long getChannelReserveSatoshis() {
+    public Long getChannelReserveSatoshis()
+    {
         return channelReserveSatoshis;
     }
 
-    public void setChannelReserveSatoshis(Long channelReserveSatoshis) {
+    public void setChannelReserveSatoshis(Long channelReserveSatoshis)
+    {
         this.channelReserveSatoshis = channelReserveSatoshis;
     }
 
-    public Long getHtlcMinimumMsat() {
+    public Long getHtlcMinimumMsat()
+    {
         return htlcMinimumMsat;
     }
 
-    public void setHtlcMinimumMsat(Long htlcMinimumMsat) {
+    public void setHtlcMinimumMsat(Long htlcMinimumMsat)
+    {
         this.htlcMinimumMsat = htlcMinimumMsat;
     }
 
-    public Integer getToSelfDelay() {
+    public Integer getToSelfDelay()
+    {
         return toSelfDelay;
     }
 
-    public void setToSelfDelay(Integer toSelfDelay) {
+    public void setToSelfDelay(Integer toSelfDelay)
+    {
         this.toSelfDelay = toSelfDelay;
     }
 
-    public Integer getMaxAcceptedHtlcs() {
+    public Integer getMaxAcceptedHtlcs()
+    {
         return maxAcceptedHtlcs;
     }
 
-    public void setMaxAcceptedHtlcs(Integer maxAcceptedHtlcs) {
+    public void setMaxAcceptedHtlcs(Integer maxAcceptedHtlcs)
+    {
         this.maxAcceptedHtlcs = maxAcceptedHtlcs;
     }
 
-    public Boolean getFunder() {
+    public Boolean getFunder()
+    {
         return isFunder;
     }
 
-    public void setFunder(Boolean funder) {
+    public void setFunder(Boolean funder)
+    {
         isFunder = funder;
     }
 
-    public String getDefaultFinalScriptPubKey() {
+    public String getDefaultFinalScriptPubKey()
+    {
         return defaultFinalScriptPubKey;
     }
 
-    public void setDefaultFinalScriptPubKey(String defaultFinalScriptPubKey) {
+    public void setDefaultFinalScriptPubKey(String defaultFinalScriptPubKey)
+    {
         this.defaultFinalScriptPubKey = defaultFinalScriptPubKey;
     }
 
-    public String getGlobalFeatures() {
+    public String getGlobalFeatures()
+    {
         return globalFeatures;
     }
 
-    public void setGlobalFeatures(String globalFeatures) {
+    public void setGlobalFeatures(String globalFeatures)
+    {
         this.globalFeatures = globalFeatures;
     }
 
-    public String getLocalFeatures() {
+    public String getLocalFeatures()
+    {
         return localFeatures;
     }
 
-    public void setLocalFeatures(String localFeatures) {
+    public void setLocalFeatures(String localFeatures)
+    {
         this.localFeatures = localFeatures;
     }
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         return ReflectionToStringBuilder.toString(this, SHORT_PREFIX_STYLE);
     }
 }

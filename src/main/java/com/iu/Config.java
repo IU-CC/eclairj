@@ -2,7 +2,8 @@ package com.iu;
 
 import com.iu.lightning.eclair.Eclair;
 
-public class Config {
+public class Config
+{
     public static final String LN_NODE_1_PUB = "03c20a3921b38a78f96477d92fe244b034ee2d2657d8825ec7452daee0395ea2f9";
     public static final String LN_NODE_2_PUB = "024fc11b24f670aebc2a3c76d3a59cc01f0364e5e194fb98cbc203746d43c578df";
     public static final String LN_NODE_1_ADDRESS = LN_NODE_1_PUB + "@54.202.231.72:9735";

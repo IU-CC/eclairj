@@ -9,8 +9,10 @@ import static com.iu.Config.*;
 
 import java.util.List;
 
-public class Main {
-    public static void main(String[] args) {
+public class Main
+{
+    public static void main(String[] args)
+    {
         Response<NodeInfo> nodeInfo = LN_NODE_1.getInfo();
         System.out.println(nodeInfo);
         System.out.println();
@@ -27,11 +29,13 @@ public class Main {
         System.out.println(channel);
         System.out.println();
 
-        try {
+        try
+        {
             Response<List<String>> route = LN_NODE_1.findroute(LN_NODE_2_PUB);
             System.out.println(route);
             System.out.println();
-        } catch (Exception e) {
+        } catch (Exception e)
+        {
             System.out.println("No route found");
             System.out.println(e);
         }
